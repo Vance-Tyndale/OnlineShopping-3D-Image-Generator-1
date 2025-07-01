@@ -1,0 +1,34 @@
+# Simple Cube OBJ
+# A 1x1x1 cube, with one corner at (0,0,0) and extending to (1,1,1).
+
+# Vertices (x, y, z)
+v 0.0 0.0 0.0
+v 1.0 0.0 0.0
+v 1.0 1.0 0.0
+v 0.0 1.0 0.0
+v 0.0 0.0 1.0
+v 1.0 0.0 1.0
+v 1.0 1.0 1.0
+v 0.0 1.0 1.0
+
+# Faces (indices of vertices, starting from 1)
+# Each line represents a face (a polygon), usually triangles or quads.
+# For a cube, we typically define 6 faces, each a quad (4 vertices).
+
+# Front face (Z=0 plane)
+f 1 2 3 4
+
+# Back face (Z=1 plane) - defined in reverse order for correct normal
+f 8 7 6 5
+
+# Left face (X=0 plane)
+f 5 8 4 1
+
+# Right face (X=1 plane)
+f 2 6 7 3
+
+# Top face (Y=1 plane)
+f 4 3 7 8
+
+# Bottom face (Y=0 plane)
+f 5 6 2 1

@@ -1,0 +1,86 @@
+/* Custom CSS for TMI App */
+
+/* Apply Inter font and basic body styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light grey background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content container */
+main {
+    flex: 1; /* Allow main content to grow */
+}
+
+/* Form section styling */
+.form-section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Model viewer container styling */
+.model-viewer {
+    width: 100%; /* Take full width of its parent */
+    max-width: 800px; /* Max width for larger screens */
+    height: 500px; /* Fixed height for the viewer */
+    background-color: #333333; /* Dark background for the 3D scene */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 40px auto; /* Center it and add space */
+    display: flex; /* Helps center internal canvas */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide any overflow from the canvas */
+}
+
+/* Adjustments for the Three.js canvas */
+.model-viewer canvas {
+    display: block; /* Remove extra space below canvas */
+    width: 100%; /* Ensure canvas fills its container */
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-section {
+        margin: 15px;
+        padding: 20px;
+    }
+    .model-viewer {
+        height: 350px; /* Slightly smaller height on mobile */
+        margin: 20px auto;
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40; /* Bootstrap dark grey */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
